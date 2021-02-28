@@ -33,12 +33,13 @@
                     </tr>
                 </thead>
                 <tbody>
+                    {% for cidade in cidades %}
                     <tr>
-                        <td>1 </td>
-                        <td>Blumenau</td>
-                        <td>SC</td>
+                        <td>{{ cidade.id }}</td>
+                        <td>{{ cidade.nome }}</td>
+                        <td>{{ cidade.estado }}</td>
                     </tr>
-                    
+                    {% endfor %}
                 </tbody>
             </table>
 
