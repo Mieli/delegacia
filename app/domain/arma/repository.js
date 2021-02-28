@@ -11,7 +11,6 @@ class ArmaRepository {
         this.save = this.save.bind(this)
         this.insert = this.insert.bind(this)
         this.update = this.update.bind(this)
-        this.update = this.update.bind(this)
         this.remove = this.remove.bind(this)
         this.findAll = this.findAll.bind(this)
         this.findById = this.findById.bind(this)

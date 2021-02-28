@@ -3,7 +3,7 @@ const {
    FindAllUseCase,
    FindByIdUseCase,
    RemoveUseCase 
-} = require('../../../usecase/arma/index')
+} = require('../../../usecase/arma')
 
 class ArmaController{
     form(req, res){

@@ -50,7 +50,7 @@ class CidadeRepository{
 
     remove(id){
         if(id){
-            this.cidades.filter(cidade => cidade.id != id)
+            this.cidades = this.cidades.filter(cidade => cidade.id != id)
         }
         return null
     }
