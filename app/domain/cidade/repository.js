@@ -21,7 +21,7 @@ class CidadeRepository{
 
     findById(id){
         if(id){
-            return this.cidades.find(element = element.id == id)
+            return this.cidades.find(element => element.id == id)
         }
         return null
     }
@@ -35,6 +35,7 @@ class CidadeRepository{
     }
 
     insert(cidade){
+        cidade.id = new Date().getTime()
         this.cidades.push(cidade)
     }
 

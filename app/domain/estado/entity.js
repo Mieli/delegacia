@@ -1,9 +1,9 @@
-class Cidade{
+class Estado{
     constructor(){
         this.id
+        this.sigla
         this.nome
-        this.estado
     }
 }
 
-module.exports = Cidade
+module.exports = Estado
