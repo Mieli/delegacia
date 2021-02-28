@@ -6,7 +6,7 @@
         <div class="jumbotron">
             <h1>Cadastro de Arma</h1>
             <hr class="my-4">
-            <a href="/" class="btn btn-danger" title="Listagem"> Home </a>
+            <a href="/" class="btn btn-success" title="Listagem"> Home </a>
             <a href="/arma/listar" class="btn btn-primary" title="Listagem"> Listagem </a>
         </div>
     </div>
@@ -15,11 +15,7 @@
 
 {% block body %}
 <div class="row justify-content-center">
-    {% if message %}
-        <div class="alert alert-danger" role="alert">
-            {{message}}
-        </div>
-    {% endif %}
+
     <div class="col-md-8">
         <form action="/arma/cadastrar" method="POST">
             <hr class="my-4">

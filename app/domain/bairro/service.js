@@ -2,7 +2,7 @@ const bairroRepository = require('./repository')
 
 class BairroService{
     constructor(){
-        this.repository = armaRepository
+        this.repository = bairroRepository
         this.save = this.save.bind(this)
         this.findAll = this.findAll.bind(this)
         this.findById = this.findById.bind(this)
@@ -25,3 +25,5 @@ class BairroService{
         this.repository.remove(id)
     }
 }
+
+module.exports = new BairroService()

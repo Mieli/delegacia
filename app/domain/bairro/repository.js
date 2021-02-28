@@ -9,7 +9,7 @@ class BairroRepository {
         this.findAll = this.findAll.bind(this)
         this.findById = this.findById.bind(this)
         this.save = this.save.bind(this)
-        this.update = this.update.binda(this)
+        this.update = this.update.bind(this)
         this.insert = this.insert.bind(this)
         this.remove = this.remove.bind(this)
 
@@ -20,7 +20,10 @@ class BairroRepository {
     }
 
     findById(id) {
-        return this.bairros.filter(element => element.id == id)
+        if(id){
+            return this.bairros.find(element => element.id == id)
+        }
+        return null
     }
 
     save(bairro) {
