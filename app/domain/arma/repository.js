@@ -2,7 +2,7 @@
 class ArmaRepository {
 
     constructor() {
-        this.Armas = [
+        this.armas = [
             { id: 1, description: "Revolver 38 polegadas", tipo: "Arma de Fogo" },
             { id: 2, description: "Faca", tipo: "Arma branca" },
             { id: 3, description: "Caco de Vidro", tipo: "Diverso" },
@@ -28,11 +28,11 @@ class ArmaRepository {
 
     insert(arma){
         arma.id = new Date().getTime()
-        this.Armas.push(arma)
+        this.armas.push(arma)
     }
 
     update(arma){
-        return this.Armas.forEach(item => {
+        return this.armas.forEach(item => {
             if(item.id === arma.id){
                 item.description = arma.description
                 item.tipo = arma.tipo
@@ -41,16 +41,16 @@ class ArmaRepository {
     }
 
     remove(id){
-        this.Armas = this.Armas.filter(arma => arma.id != id)
+        this.armas = this.armas.filter(arma => arma.id != id)
     }
 
     findAll() {
-        return this.Armas
+        return this.armas
     }
 
     findById(id){
         if(id){
-            return this.Armas.find(element => element.id == id)
+            return this.armas.find(element => element.id == id)
         }
         return null
     }

@@ -6,7 +6,7 @@
         <div class="jumbotron">
             <h1>Cadastro de Bairro</h1>
             <hr class="my-4">
-            <a href="/" class="btn btn-danger" title="Listagem"> Home </a>
+            <a href="/" class="btn btn-success" title="Listagem"> Home </a>
             <a href="/bairro/listar" class="btn btn-primary" title="Listagem"> Listagem </a>
         </div>
     </div>
@@ -22,7 +22,7 @@
                 <div class="col-md-12">
                     <div class="form-group">
                         <label>ID</label>
-                        <input class="form-control" type="number" name="id" value="{bairro.id}}" readonly>
+                        <input class="form-control" type="number" name="id" value="{{bairro.id}}" readonly>
                     </div>
                 </div>
             </div>
@@ -30,7 +30,7 @@
                 <div class="col-md-12">
                     <div class="form-group">
                         <label>Nome</label>
-                        <input class="form-control" type="text" name="sigla" value="{{bairro.nome}}">
+                        <input class="form-control" type="text" name="nome" value="{{bairro.nome}}">
                     </div>
                 </div>
             </div>   
@@ -39,11 +39,11 @@
                 <div class="col-md-12">
                     <div class="form-group">
                         <label>Cidade</label>
-                        <select class="form-control form-select" aria-label="Default select example">
+                        <select class="form-control form-select" aria-label="Default select example" name="cidade">
                             <option selected>Selecione a Cidade</option>
-                            <option value="1">Blumenau</option>
-                            <option value="2">Curitiba</option>
-                            <option value="3">São Paulo</option>
+                            <option value="1" >Blumenau</option>
+                            <option value="2" >Curitiba</option>
+                            <option value="3" >São Paulo</option>
                         </select>
                     </div>
                 </div>
