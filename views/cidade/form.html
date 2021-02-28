@@ -1,0 +1,64 @@
+{% extends "../base.html" %}
+
+{% block header %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="jumbotron">
+            <h1>Cadastro de Cidade</h1>
+            <hr class="my-4">
+            <a href="/" class="btn btn-danger" title="Listagem"> Home </a>
+            <a href="/cidade/listar" class="btn btn-primary" title="Listagem"> Listagem </a>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block body %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <form action="/cidade/cadastrar" method="POST">
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>ID</label>
+                        <input class="form-control" type="number" name="id" value="{cidade.id}}" readonly>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>Nome</label>
+                        <input class="form-control" type="text" name="sigla" value="{{cidade.nome}}">
+                    </div>
+                </div>
+            </div>   
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>Estado</label>
+                        <select class="form-control form-select" aria-label="Default select example">
+                            <option selected>Selecione o Estado</option>
+                            <option value="1">SP</option>
+                            <option value="2">SC</option>
+                            <option value="3">PR</option>
+                        </select>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="my-4"></p>
+                    <div class="form-group">
+                        <button type="submit" class="form-control btn btn-primary">Salvar</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

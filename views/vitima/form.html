@@ -1,0 +1,74 @@
+{% extends "../base.html" %}
+
+{% block header %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="jumbotron">
+            <h1>Cadastro de Vítima</h1>
+            <hr class="my-4">
+            <a href="/" class="btn btn-danger" title="Listagem"> Home </a>
+            <a href="/vitima/listar" class="btn btn-primary" title="Listagem"> Listagem </a>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block body %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <form action="/vitima/cadastrar" method="POST">
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>ID</label>
+                        <input class="form-control" type="number" name="id" value="{{vitima.id}}" readonly>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>Nome</label>
+                        <input class="form-control" type="text" name="nome" value="{{vitima.nome}}">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>CPF</label>
+                        <input class="form-control" type="text" name="cpf" value="{{vitima.cpf}}">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>Telefone</label>
+                        <input class="form-control" type="text" name="telefone" value="{{vitima.telefone}}">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input class="form-control" type="text" name="email" value="{{vitima.email}}">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="my-4"></p>
+                    <div class="form-group">
+                        <button type="submit" class="form-control btn btn-primary">Salvar</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

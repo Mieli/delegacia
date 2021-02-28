@@ -1,0 +1,69 @@
+{% extends "../base.html" %}
+
+{% block header %}
+
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="jumbotron">
+                <h1>Lista de Cidades</h1>
+                <hr class="my-4">
+                <a href="/" class="btn btn-success" title="Listagem"> Home </a>
+                <a href="/cidade/formulario" class="btn btn-primary" title="Cadastrar Cidade"> Cadastrar Cidade </a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block body %}
+    <div class="row justify-content-center">
+        <div class="col-md-8 mb-2">
+
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <hr class="my-4">
+            <table class="table table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Cidade</th>
+                        <th scope="col">Estado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1 </td>
+                        <td>Blumenau</td>
+                        <td>SC</td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+<script>
+    // function init(){
+    //     let removeButtons = document.querySelectorAll('.btn-danger');
+    //     console.log(removeButtons);
+    //     for(let btn of removeButtons){
+    //         btn.addEventListener('click', confirmRemove);
+    //     }
+    // }
+
+    // function confirmRemove(event){
+    //     const confirm = window.confirm('Deseja realmente remover o Registro?');
+    //     if(!confirm){
+    //         event.preventDefault();
+    //         event.stopPropagation();
+    //     }
+    // }
+
+    // init();
+
+</script>
+
+{% endblock %}

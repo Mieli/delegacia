@@ -1,0 +1,75 @@
+{% extends "../base.html" %}
+
+{% block header %}
+
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="jumbotron">
+                <h1>Lista de Crimes</h1>
+                <hr class="my-4">
+                <a href="/" class="btn btn-success" title="Listagem"> Home </a>
+                <a href="/crime/formulario" class="btn btn-primary" title="Cadastrar crime"> Cadastrar crime </a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block body %}
+    <div class="row justify-content-center">
+        <div class="col-md-8 mb-2">
+
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <hr class="my-4">
+            <table class="table table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Descrição</th>
+                        <th scope="col">Data</th>
+                        <th scope="col">Logradouro</th>
+                        <th scopre="col">Bairro</th>
+                    </tr>
+                </thead>
+                <tbody>
+                   
+                    <tr>
+                        <td>1 </td>
+                        <td>Assalto a mão armada</td>
+                        <td>15/02/2021</td>
+                        <td>Ruas das Américas, nr 450</td>
+                        <td>Garcia</td>
+                        
+                    </tr>
+                    
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+<script>
+    // function init(){
+    //     let removeButtons = document.querySelectorAll('.btn-danger');
+    //     console.log(removeButtons);
+    //     for(let btn of removeButtons){
+    //         btn.addEventListener('click', confirmRemove);
+    //     }
+    // }
+
+    // function confirmRemove(event){
+    //     const confirm = window.confirm('Deseja realmente remover o Registro?');
+    //     if(!confirm){
+    //         event.preventDefault();
+    //         event.stopPropagation();
+    //     }
+    // }
+
+    // init();
+
+</script>
+
+{% endblock %}

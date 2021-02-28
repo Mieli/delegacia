@@ -1,0 +1,50 @@
+{% extends "../base.html" %}
+
+{% block header %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="jumbotron">
+            <h1>Cadastro de Tipo de Arma</h1>
+            <hr class="my-4">
+            <a href="/" class="btn btn-danger" title="Listagem"> Home </a>
+            <a href="/tipo-arma/listar" class="btn btn-primary" title="Listagem"> Listagem </a>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block body %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <form action="/tipo-arma/cadastrar" method="POST">
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>ID</label>
+                        <input class="form-control" type="number" name="id" value="{tipoArma.id}}" readonly>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>Descrição</label>
+                        <input class="form-control" type="text" name="descricao" value="{{tipoArma.descricao}}">
+                    </div>
+                </div>
+            </div>   
+
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="my-4"></p>
+                    <div class="form-group">
+                        <button type="submit" class="form-control btn btn-primary">Salvar</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+{% endblock %}
